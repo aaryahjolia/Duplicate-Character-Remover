@@ -1,0 +1,43 @@
+.heading{
+    text-align: center;
+    padding: .5rem 0;
+    background-color: rgb(51, 51, 51);
+    color: white;
+    font-size: 2rem;
+}
+
+.screen1_form{
+    width: 90%;
+    margin: 3rem auto;
+}
+
+.screen1_label{
+    display: block;
+    font-size: 1.3rem;
+}
+
+.screen1_input{
+    border: 1px solid black;
+    margin: 1.5rem auto;
+    width: 100%;
+    border-radius: .2rem;
+    padding: .4rem .6rem;
+    font-size: 1rem;
+    overflow:auto;
+}
+
+.button{
+    padding: .3rem 1.5rem;
+    font-size: 1.1rem;
+    border-radius: 3rem;
+    border: 2px solid green;
+    background-color: transparent;
+    color: green;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: green;
+    color: white;
+    transition: .15s ease-in-out;
+}

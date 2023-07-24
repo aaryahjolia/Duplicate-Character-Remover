@@ -1,0 +1,106 @@
+.screen2{
+    width: 90%;
+    margin: 3rem auto;
+}
+
+.result_div{
+    font-size: 1.3rem;
+    margin: 2rem auto;
+
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+.result_div p{
+    margin: .5rem auto;
+}
+
+.string_main_div{
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 2rem auto;
+}
+
+.string_cards_div{
+    /* border: 1px solid red; */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin: 1rem auto;
+    margin-bottom: 0;
+    flex-wrap: wrap;
+}
+
+.string_card_box{
+    border: 1px solid red;
+    width: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    border-radius: .4rem;
+}
+
+.string_card_button{
+    margin-top: .3rem;
+    border-radius: 50%;
+    padding: .1rem;
+    font-size: .54rem;
+    cursor: pointer;
+}
+.string_card_heading{
+    margin: .3rem 0;
+}
+.string_card_hr_line{
+    border: .1px solid black;
+    width: 90%;
+}
+.string_card_index_heading{
+    font-size: .6rem;
+}
+
+.home_button_div{
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Error Message when reloading screen2 */
+
+.error_message_main_div{
+    position: relative;
+    height: 100vh;
+}
+
+.error_message_div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 1rem;
+    text-align: center;
+    border: 1px solid red;
+    background-color: rgba(255, 0, 0, 0.07);
+}
+
+.error_message_heading{
+    margin: 2rem 0;
+}
+.error_message_button_div{
+    margin-bottom: 2rem;
+}
+
+
+@media screen and (max-width:768px) {
+    .string_card_box{
+        width: 20%;
+    }
+    .string_main_div>div>h1, .string_main_div>p{
+        text-align: center;
+    }
+}

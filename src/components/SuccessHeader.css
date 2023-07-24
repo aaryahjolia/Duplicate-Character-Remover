@@ -1,0 +1,8 @@
+.success_header{
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: rgba(0, 128, 0, 0.753);
+    color: white;
+    font-size: 1.3rem;
+}
