@@ -1,8 +1,50 @@
-.success_header{
-    border: 1px solid black;
+.success-header-container {
+    margin-bottom: 2rem;
+}
+
+.success_header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.2);
+    padding: 1.5rem;
     border-radius: 1rem;
-    padding: 1rem;
-    background-color: rgba(0, 128, 0, 0.753);
+    animation: slideDown 0.5s ease-out;
+}
+
+.success-icon {
+    background: var(--success);
     color: white;
-    font-size: 1.3rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.success-text h3 {
+    margin: 0;
+    color: var(--success);
+    font-size: 1.2rem;
+}
+
+.success-text p {
+    margin: 0.25rem 0 0;
+    color: var(--text-muted);
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }

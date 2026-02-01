@@ -12,13 +12,14 @@ function Card({ character, handleDeleteCharacter, index }) {
   }
   return (
     <>
-      <div className='string_card_box' style={{ backgroundColor: getBgColor(character) }}>
-        {/* <div className='string_card_inner_box'> */}
-          <button className='string_card_button' title='Delete' onClick={() => handleDeleteCharacter(character, index)}>&#10060;</button>
-          <h1 className='string_card_heading'>{character === ' ' ? '' : character}</h1>
-          {/* <hr className='string_card_hr_line'/> */}
-          {/* <p className='string_card_index_heading'>{index}</p> */}
-        {/* </div> */}
+      <div className='string_card_box' style={{
+        backgroundColor: getBgColor(character),
+        boxShadow: `0 4px 12px ${getBgColor(character)}44`
+      }}>
+        <button className='string_card_button' title='Remove all occurrences' onClick={() => handleDeleteCharacter(character, index)}>
+          &times;
+        </button>
+        <h1 className='string_card_heading'>{character === ' ' ? '␣' : character}</h1>
       </div>
     </>
   )

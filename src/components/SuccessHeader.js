@@ -4,13 +4,16 @@ import './SuccessHeader.css'
 
 function SuccessHeader({ unique, result }) {
   return (
-    <div>
-      {unique && <>
+    <div className='success-header-container'>
+      {unique && (
         <div className='success_header'>
-            <p className=''>Success! There are no Duplicate characters in the string.</p>
-            <p>Resultant String: {result}</p>
+          <div className="success-icon">✓</div>
+          <div className="success-text">
+            <h3>Clean!</h3>
+            <p>No duplicate characters remaining.</p>
+          </div>
         </div>
-        </>}
+      )}
     </div>
   );
 }

@@ -16,13 +16,13 @@ function App() {
           <Route
             exact
             path="/"
-            element={<Screen1 setInputString={setInputString}/>}
+            element={<Screen1 setInputString={setInputString} />}
           ></Route>
 
           <Route
             exact
             path="/screen2"
-            element={<Screen2 inputString={inputString}/>}
+            element={<Screen2 inputString={inputString} />}
           ></Route>
 
         </Routes>

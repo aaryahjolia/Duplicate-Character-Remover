@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Toast from '../components/Toast';
 import './Screen1.css'
 
 function Screen1({ setInputString }) {
 
   const [text, setText] = useState('');
+  const [toast, setToast] = useState({ show: false, message: '', type: 'error' });
   const navigate = useNavigate();
 
   function handleInputChange(e) {
@@ -14,10 +16,10 @@ function Screen1({ setInputString }) {
   function handleSubmit(e) {
     e.preventDefault();
     if (text.length === 0) {
-      alert('Please provide a non-empty string!');
+      setToast({ show: true, message: 'Please provide a non-empty string!', type: 'error' });
     }
     else if (!text.replace(/\s/g, '').length) {
-      alert("Contains only spaces!");
+      setToast({ show: true, message: "Contains only spaces!", type: 'error' });
       setText('');
     }
     else {
@@ -28,21 +30,41 @@ function Screen1({ setInputString }) {
 
   return (
     <div className="screen1">
-      <h1 className='heading'>Remove Duplicate Characters</h1>
-
+      <h1 className='heading'>Duplicate Character Remover</h1>
 
       <form onSubmit={handleSubmit} className="screen1_form">
-        <label className='screen1_label'>
-          Input String:
-        </label>
-        <input
-          type="text"
-          value={text}
-          onChange={handleInputChange}
-          className="screen1_input"
-        />
-        <button type="submit" className='button'>Submit</button>
+        <div className="input-group">
+          <label className='screen1_label'>
+            Input String
+          </label>
+          <input
+            type="text"
+            placeholder="Type something here..."
+            value={text}
+            onChange={handleInputChange}
+            className="screen1_input"
+          />
+        </div>
+        <button type="submit" className='button'>Analyze String</button>
       </form>
+
+      <div className="how-it-works">
+        <h2>How it works</h2>
+        <p>
+          This tool helps you identify and remove duplicate characters from any string.
+          Simply enter your text above, and on the next screen, you can interactively
+          remove specific characters or clean up the entire string at once.
+        </p>
+        <div className="example-box">
+          <strong>Example:</strong> "Cincinnati" &rarr; [C, i, n, c, i, n, n, a, t, i] &rarr; Click on first 'i' &rarr; "Cincnnat"
+        </div>
+      </div>
+      <Toast
+        show={toast.show}
+        message={toast.message}
+        type={toast.type}
+        onClose={() => setToast({ ...toast, show: false })}
+      />
     </div>
   );
 }
